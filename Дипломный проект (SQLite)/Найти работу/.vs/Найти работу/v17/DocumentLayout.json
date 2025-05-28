@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nikita\\Desktop\\\u0414\u0438\u043F\u043B\u043E\u043C\u043D\u044B\u0439 \u043F\u0440\u043E\u0435\u043A\u0442 (SQLite)\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F13B7316-59C8-4A3A-B116-B587DCA2F687}|\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443.csproj|c:\\users\\nikita\\desktop\\\u0434\u0438\u043F\u043B\u043E\u043C\u043D\u044B\u0439 \u043F\u0440\u043E\u0435\u043A\u0442 (sqlite)\\\u043D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\\u043D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\zayavleniarabotodateleyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F13B7316-59C8-4A3A-B116-B587DCA2F687}|\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443.csproj|solutionrelative:\u043D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\zayavleniarabotodateleyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F13B7316-59C8-4A3A-B116-B587DCA2F687}|\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443.csproj|c:\\users\\nikita\\desktop\\\u0434\u0438\u043F\u043B\u043E\u043C\u043D\u044B\u0439 \u043F\u0440\u043E\u0435\u043A\u0442 (sqlite)\\\u043D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\\u043D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\zayavleniarabotodateleyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F13B7316-59C8-4A3A-B116-B587DCA2F687}|\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443.csproj|solutionrelative:\u043D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\zayavleniarabotodateleyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ZayavleniaRabotodateleyForm.cs",
+              "DocumentMoniker": "C:\\Users\\Nikita\\Desktop\\\u0414\u0438\u043F\u043B\u043E\u043C\u043D\u044B\u0439 \u043F\u0440\u043E\u0435\u043A\u0442 (SQLite)\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\ZayavleniaRabotodateleyForm.cs",
+              "RelativeDocumentMoniker": "\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\ZayavleniaRabotodateleyForm.cs",
+              "ToolTip": "C:\\Users\\Nikita\\Desktop\\\u0414\u0438\u043F\u043B\u043E\u043C\u043D\u044B\u0439 \u043F\u0440\u043E\u0435\u043A\u0442 (SQLite)\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\ZayavleniaRabotodateleyForm.cs",
+              "RelativeToolTip": "\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\ZayavleniaRabotodateleyForm.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAWwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T10:24:21.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ZayavleniaRabotodateleyForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Nikita\\Desktop\\\u0414\u0438\u043F\u043B\u043E\u043C\u043D\u044B\u0439 \u043F\u0440\u043E\u0435\u043A\u0442 (SQLite)\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\ZayavleniaRabotodateleyForm.cs",
+              "RelativeDocumentMoniker": "\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\ZayavleniaRabotodateleyForm.cs",
+              "ToolTip": "C:\\Users\\Nikita\\Desktop\\\u0414\u0438\u043F\u043B\u043E\u043C\u043D\u044B\u0439 \u043F\u0440\u043E\u0435\u043A\u0442 (SQLite)\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\ZayavleniaRabotodateleyForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "\u041D\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u0443\\ZayavleniaRabotodateleyForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T10:24:17.368Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
