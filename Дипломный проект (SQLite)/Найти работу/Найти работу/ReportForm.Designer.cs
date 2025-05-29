@@ -42,6 +42,7 @@
             // 
             // comboErrorType
             // 
+            this.comboErrorType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboErrorType.FormattingEnabled = true;
             this.comboErrorType.Items.AddRange(new object[] {
             "Проблема с интерфейсом",

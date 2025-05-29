@@ -240,6 +240,7 @@
             // comboSex
             // 
             this.comboSex.BackColor = System.Drawing.Color.White;
+            this.comboSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSex.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboSex.ForeColor = System.Drawing.Color.Black;
             this.comboSex.IntegralHeight = false;
@@ -269,6 +270,7 @@
             // comboSemPol
             // 
             this.comboSemPol.BackColor = System.Drawing.Color.White;
+            this.comboSemPol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSemPol.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboSemPol.ForeColor = System.Drawing.Color.Black;
             this.comboSemPol.IntegralHeight = false;
@@ -294,6 +296,7 @@
             // comboChildren
             // 
             this.comboChildren.BackColor = System.Drawing.Color.White;
+            this.comboChildren.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboChildren.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboChildren.ForeColor = System.Drawing.Color.Black;
             this.comboChildren.IntegralHeight = false;
@@ -533,6 +536,7 @@
             // 
             // comborole
             // 
+            this.comborole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comborole.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comborole.ForeColor = System.Drawing.Color.Black;
             this.comborole.FormattingEnabled = true;

@@ -184,6 +184,7 @@
             // comboObr
             // 
             this.comboObr.BackColor = System.Drawing.Color.White;
+            this.comboObr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboObr.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboObr.ForeColor = System.Drawing.Color.Black;
             this.comboObr.IntegralHeight = false;
@@ -220,6 +221,7 @@
             // comboPodr
             // 
             this.comboPodr.BackColor = System.Drawing.Color.White;
+            this.comboPodr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPodr.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboPodr.ForeColor = System.Drawing.Color.Black;
             this.comboPodr.IntegralHeight = false;
@@ -261,6 +263,7 @@
             // comboTipZan
             // 
             this.comboTipZan.BackColor = System.Drawing.Color.White;
+            this.comboTipZan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTipZan.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboTipZan.ForeColor = System.Drawing.Color.Black;
             this.comboTipZan.IntegralHeight = false;
@@ -281,6 +284,7 @@
             // comboGraph
             // 
             this.comboGraph.BackColor = System.Drawing.Color.White;
+            this.comboGraph.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboGraph.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboGraph.ForeColor = System.Drawing.Color.Black;
             this.comboGraph.IntegralHeight = false;
@@ -301,6 +305,7 @@
             // comboOpyt
             // 
             this.comboOpyt.BackColor = System.Drawing.Color.White;
+            this.comboOpyt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboOpyt.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboOpyt.ForeColor = System.Drawing.Color.Black;
             this.comboOpyt.IntegralHeight = false;
@@ -321,6 +326,7 @@
             // comboSpec
             // 
             this.comboSpec.BackColor = System.Drawing.Color.White;
+            this.comboSpec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSpec.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboSpec.ForeColor = System.Drawing.Color.Black;
             this.comboSpec.IntegralHeight = false;

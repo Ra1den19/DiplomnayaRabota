@@ -616,6 +616,7 @@
             // comboEdu
             // 
             this.comboEdu.BackColor = System.Drawing.Color.White;
+            this.comboEdu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEdu.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboEdu.ForeColor = System.Drawing.Color.Black;
             this.comboEdu.IntegralHeight = false;

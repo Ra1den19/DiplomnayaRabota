@@ -48,8 +48,6 @@ namespace Найти_работу
             }
         }
 
-
-
         private void dataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -61,7 +59,6 @@ namespace Найти_работу
                 rif.ShowDialog();
             }
         }
-
 
         private async void search_button_Click(object sender, EventArgs e)
         {
@@ -117,5 +114,4 @@ namespace Найти_работу
         }
 
     }
-
 }

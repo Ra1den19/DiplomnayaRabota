@@ -106,7 +106,6 @@ C:\Users\Nikita\Desktop\Дипломный проект (SQLite)\Найти ра
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\Найти работу.exe.config
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\Найти работу.exe
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\Найти работу.pdb
-C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\BouncyCastle.Cryptography.dll
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\EntityFramework.dll
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\EntityFramework.SqlServer.dll
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\EPPlus.dll
@@ -124,7 +123,6 @@ C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект 
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\System.Memory.dll
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\System.Numerics.Vectors.dll
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\BouncyCastle.Cryptography.xml
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\EntityFramework.xml
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\nicit\OneDrive\Рабочий стол\Дипломный проект (SQLite)\Найти работу\Найти работу\bin\Release\EPPlus.xml

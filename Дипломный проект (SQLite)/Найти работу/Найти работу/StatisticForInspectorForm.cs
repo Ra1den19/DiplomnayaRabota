@@ -38,7 +38,6 @@ namespace Найти_работу
 
         private void LoadChartDataByPeriod(DateTime startDate, DateTime endDate)
         {
-            // Формируем запросы с учетом периода
             string queryOtklic = $"SELECT COUNT(КодОтклика) FROM Отклики WHERE ДатаОтклика BETWEEN '{startDate:dd.MM.yyyy}' AND '{endDate:dd.MM.yyyy}'";
             string queryPriglasheniya = $"SELECT COUNT(КодПриглашения) FROM Приглашения WHERE ДатаПриглашения BETWEEN '{startDate:dd.MM.yyyy}' AND '{endDate:dd.MM.yyyy}'";
 
@@ -53,38 +52,30 @@ namespace Найти_работу
                     int countOtklic = Convert.ToInt32(commandOtklic.ExecuteScalar());
                     int countPriglasheniya = Convert.ToInt32(commandPriglasheniya.ExecuteScalar());
 
-                    // Очистка предыдущих данных
                     gunaChart1.Datasets.Clear();
 
-                    // Создание нового набора данных
                     var dataset = new Guna.Charts.WinForms.GunaBarDataset();
                     dataset.Label = "Количество";
                     dataset.DataPoints.Add("Отклики", countOtklic);
                     dataset.DataPoints.Add("Приглашения", countPriglasheniya);
 
-                    // Настройка цветов
                     dataset.FillColors.Add(Color.SteelBlue);
                     dataset.FillColors.Add(Color.LightBlue);
 
-                    // Добавление набора данных в график
                     gunaChart1.Datasets.Add(dataset);
 
-                    // Настройка осей
                     gunaChart1.XAxes.GridLines.Display = false;
                     gunaChart1.YAxes.GridLines.Color = Color.LightGray;
                     gunaChart1.YAxes.Ticks.Font = new Guna.Charts.WinForms.ChartFont("Segoe UI", 8);
                     gunaChart1.XAxes.Ticks.Font = new Guna.Charts.WinForms.ChartFont("Segoe UI", 8);
 
-                    // Настройка заголовка
                     gunaChart1.Title.Text = $"Статистика откликов и приглашений за период с {startDate:dd.MM.yyyy} по {endDate:dd.MM.yyyy}";
                     gunaChart1.Title.Font = new Guna.Charts.WinForms.ChartFont("Segoe UI", 14, Guna.Charts.WinForms.ChartFontStyle.Bold);
                     gunaChart1.Title.ForeColor = Color.DarkSlateGray;
 
-                    // Настройка легенды
                     gunaChart1.Legend.Display = true;
                     gunaChart1.Legend.Position = Guna.Charts.WinForms.LegendPosition.Top;
 
-                    // Обновление графика
                     gunaChart1.Update();
                 }
                 catch (Exception ex)
@@ -122,38 +113,30 @@ namespace Найти_работу
                     int countOtklic = Convert.ToInt32(commandOtklic.ExecuteScalar());
                     int countPriglasheniya = Convert.ToInt32(commandPriglasheniya.ExecuteScalar());
 
-                    // Очистка предыдущих данных
                     gunaChart1.Datasets.Clear();
 
-                    // Создание нового набора данных
                     var dataset = new Guna.Charts.WinForms.GunaBarDataset();
                     dataset.Label = "Количество";
                     dataset.DataPoints.Add("Отклики", countOtklic);
                     dataset.DataPoints.Add("Приглашения", countPriglasheniya);
 
-                    // Настройка цветов
                     dataset.FillColors.Add(Color.SteelBlue);
                     dataset.FillColors.Add(Color.LightBlue);
 
-                    // Добавление набора данных в график
                     gunaChart1.Datasets.Add(dataset);
 
-                    // Настройка осей
                     gunaChart1.XAxes.GridLines.Display = false;
                     gunaChart1.YAxes.GridLines.Color = Color.LightGray;
                     gunaChart1.YAxes.Ticks.Font = new Guna.Charts.WinForms.ChartFont("Segoe UI", 8);
                     gunaChart1.XAxes.Ticks.Font = new Guna.Charts.WinForms.ChartFont("Segoe UI", 8);
 
-                    // Настройка заголовка
                     gunaChart1.Title.Text = "Статистика откликов и приглашений";
                     gunaChart1.Title.Font = new Guna.Charts.WinForms.ChartFont("Segoe UI", 14, Guna.Charts.WinForms.ChartFontStyle.Bold);
                     gunaChart1.Title.ForeColor = Color.DarkSlateGray;
 
-                    // Настройка легенды
                     gunaChart1.Legend.Display = true;
                     gunaChart1.Legend.Position = Guna.Charts.WinForms.LegendPosition.Top;
 
-                    // Обновление графика
                     gunaChart1.Update();
                 }
                 catch (Exception ex)
@@ -165,7 +148,6 @@ namespace Найти_работу
 
         private void LoadChartDataVacancies()
         {
-            // Получаем выбранную специализацию
             string selectedSpecialization = comboSpec.SelectedItem?.ToString();
             bool showAll = selectedSpecialization == "Все" || string.IsNullOrEmpty(selectedSpecialization);
 

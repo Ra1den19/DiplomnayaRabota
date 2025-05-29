@@ -26,8 +26,25 @@ namespace Найти_работу
             comboSpec.SelectedIndex = 0;
             comboTipZan.SelectedIndex = 0;
 
+            textOt.KeyPress += AllowOnlyDigits;
+            textDo.KeyPress += AllowOnlyDigits;
 
             ApplyFilterAsync();
+        }
+
+        private void AllowOnlyDigits(object sender, KeyPressEventArgs e)
+        {
+            // Разрешаем:
+            // - цифры (0-9)
+            // - Backspace (код 8)
+            // - Delete (код 127)
+            // - Ctrl+C (код 3)
+            // - Ctrl+V (код 22)
+            // - Ctrl+X (код 24)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Блокируем ввод
+            }
         }
 
         private async void ApplyFilterAsync()
@@ -77,7 +94,7 @@ namespace Найти_работу
 
             if (decimal.TryParse(Ot, out decimal minSalary) && decimal.TryParse(Do, out decimal maxSalary))
             {
-                query += $"AND Зарплата BETWEEN {minSalary} AND {maxSalary} ";
+                query += $" AND CAST(Зарплата AS DECIMAL) BETWEEN {minSalary} AND {maxSalary}";
             }
 
             if (comboSpec.SelectedItem?.ToString() != "Все")

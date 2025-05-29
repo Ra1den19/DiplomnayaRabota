@@ -26,68 +26,108 @@ namespace Найти_работу
                 string fam = textfam.Text;
                 string name = textim.Text;
                 string otchestvo = textot.Text;
-                string sex = comboSex.SelectedItem.ToString();
-                string sempol = comboSemPol.SelectedItem.ToString();
-                string kids = comboChildren.SelectedItem.ToString();
+                string sex = comboSex.SelectedItem?.ToString();
+                string sempol = comboSemPol.SelectedItem?.ToString();
+                string kids = comboChildren.SelectedItem?.ToString();
                 string grazhd = textGrazhd.Text;
                 string nomer = textphone.Text;
                 string mail = textmail.Text;
                 string birthday = textBirth.Text;
                 string login = textlogin.Text;
                 string password = textpassword.Text;
-                string role = comborole.SelectedItem.ToString();
-                string regDate = DateTime.Now.ToString("dd.MM.yyyy"); // Форматируем дату для SQLite
+                string role = comborole.SelectedItem?.ToString();
+                string regDate = DateTime.Now.ToString("dd.MM.yyyy");
 
-                if (fam != string.Empty && name != string.Empty && otchestvo != string.Empty && nomer != string.Empty && mail != string.Empty && login != string.Empty && password != string.Empty)
+                if (string.IsNullOrWhiteSpace(fam) || string.IsNullOrWhiteSpace(name) ||
+                    string.IsNullOrWhiteSpace(otchestvo) || string.IsNullOrWhiteSpace(nomer) ||
+                    string.IsNullOrWhiteSpace(mail) || string.IsNullOrWhiteSpace(login) ||
+                    string.IsNullOrWhiteSpace(password))
                 {
-                    // Используем SQLiteConnection вместо SqlConnection
-                    using (SQLiteConnection con = new SQLiteConnection(DataBaseConfig.ConnectionString))
+                    MessageBox.Show("Пожалуйста, заполните необходимые поля", "Сообщение",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!System.Text.RegularExpressions.Regex.IsMatch(mail, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                {
+                    MessageBox.Show("Введите корректный email адрес", "Ошибка",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                using (SQLiteConnection con = new SQLiteConnection(DataBaseConfig.ConnectionString))
+                {
+                    con.Open();
+                    string checkLoginQuery = "SELECT COUNT(*) FROM Пользователи WHERE Логин = @Логин";
+                    string checkEmailQuery = "SELECT COUNT(*) FROM Пользователи WHERE ЭлПочта = @ЭлПочта";
+
+                    // Проверка логина
+                    using (SQLiteCommand checkCmd = new SQLiteCommand(checkLoginQuery, con))
                     {
-                        // Формируем SQL-запрос
-                        string query = @"
-                            INSERT INTO Пользователи (
-                                Логин, Пароль, Роль, Фамилия, Имя, Отчество, Пол, 
-                                СемейноеПоложение, НаличиеДетей, Гражданство, ДатаРождения, 
-                                НомерТелефона, ЭлПочта, ДатаРегистрации
-                            ) VALUES (
-                                @Логин, @Пароль, @Роль, @Фамилия, @Имя, @Отчество, @Пол, 
-                                @СемейноеПоложение, @НаличиеДетей, @Гражданство, @ДатаРождения, 
-                                @НомерТелефона, @ЭлПочта, @ДатаРегистрации
-                            )";
+                        checkCmd.Parameters.AddWithValue("@Логин", login);
+                        int userCount = Convert.ToInt32(checkCmd.ExecuteScalar());
 
-                        // Открываем соединение
-                        con.Open();
-
-                        // Используем SQLiteCommand вместо SqlCommand
-                        using (SQLiteCommand com = new SQLiteCommand(query, con))
+                        if (userCount > 0)
                         {
-                            // Добавляем параметры для защиты от SQL-инъекций
-                            com.Parameters.AddWithValue("@Логин", login);
-                            com.Parameters.AddWithValue("@Пароль", password);
-                            com.Parameters.AddWithValue("@Роль", role);
-                            com.Parameters.AddWithValue("@Фамилия", fam);
-                            com.Parameters.AddWithValue("@Имя", name);
-                            com.Parameters.AddWithValue("@Отчество", otchestvo);
-                            com.Parameters.AddWithValue("@Пол", sex);
-                            com.Parameters.AddWithValue("@СемейноеПоложение", sempol);
-                            com.Parameters.AddWithValue("@НаличиеДетей", kids);
-                            com.Parameters.AddWithValue("@Гражданство", grazhd);
-                            com.Parameters.AddWithValue("@ДатаРождения", birthday);
-                            com.Parameters.AddWithValue("@НомерТелефона", nomer);
-                            com.Parameters.AddWithValue("@ЭлПочта", mail);
-                            com.Parameters.AddWithValue("@ДатаРегистрации", regDate);
-
-                            // Выполняем запрос
-                            com.ExecuteNonQuery();
+                            MessageBox.Show("Пользователь с таким логином уже существует", "Ошибка",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
                         }
                     }
 
-                    MessageBox.Show("Вы успешно зарегистрированы", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Проверка email
+                    using (SQLiteCommand checkCmd = new SQLiteCommand(checkEmailQuery, con))
+                    {
+                        checkCmd.Parameters.AddWithValue("@ЭлПочта", mail);
+                        int emailCount = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+                        if (emailCount > 0)
+                        {
+                            MessageBox.Show("Пользователь с таким email адресом уже существует", "Ошибка",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
                 }
-                else
+
+                using (SQLiteConnection con = new SQLiteConnection(DataBaseConfig.ConnectionString))
                 {
-                    MessageBox.Show("Пожалуйста, заполните необходимые поля", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    string query = @"
+    INSERT INTO Пользователи (
+        Логин, Пароль, Роль, Фамилия, Имя, Отчество, Пол, 
+        СемейноеПоложение, НаличиеДетей, Гражданство, ДатаРождения, 
+        НомерТелефона, ЭлПочта, ДатаРегистрации
+    ) VALUES (
+        @Логин, @Пароль, @Роль, @Фамилия, @Имя, @Отчество, @Пол, 
+        @СемейноеПоложение, @НаличиеДетей, @Гражданство, @ДатаРождения, 
+        @НомерТелефона, @ЭлПочта, @ДатаРегистрации
+    )";
+
+                    con.Open();
+
+                    using (SQLiteCommand com = new SQLiteCommand(query, con))
+                    {
+                        com.Parameters.AddWithValue("@Логин", login);
+                        com.Parameters.AddWithValue("@Пароль", password);
+                        com.Parameters.AddWithValue("@Роль", role);
+                        com.Parameters.AddWithValue("@Фамилия", fam);
+                        com.Parameters.AddWithValue("@Имя", name);
+                        com.Parameters.AddWithValue("@Отчество", otchestvo);
+                        com.Parameters.AddWithValue("@Пол", sex);
+                        com.Parameters.AddWithValue("@СемейноеПоложение", sempol);
+                        com.Parameters.AddWithValue("@НаличиеДетей", kids);
+                        com.Parameters.AddWithValue("@Гражданство", grazhd);
+                        com.Parameters.AddWithValue("@ДатаРождения", birthday);
+                        com.Parameters.AddWithValue("@НомерТелефона", nomer);
+                        com.Parameters.AddWithValue("@ЭлПочта", mail);
+                        com.Parameters.AddWithValue("@ДатаРегистрации", regDate);
+
+                        com.ExecuteNonQuery();
+                    }
                 }
+
+                MessageBox.Show("Вы успешно зарегистрированы", "Сообщение",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
