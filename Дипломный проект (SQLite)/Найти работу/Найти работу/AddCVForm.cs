@@ -20,6 +20,7 @@ namespace Найти_работу
         public AddCVForm()
         {
             InitializeComponent();
+            comboEdu.SelectedIndex = 0;
         }
 
         private void addcv_button_Click(object sender, EventArgs e)

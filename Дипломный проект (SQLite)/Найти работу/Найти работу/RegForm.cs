@@ -16,7 +16,10 @@ namespace Найти_работу
     {
         public RegForm()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            comboSex.SelectedIndex = 0;
+            comboChildren.SelectedIndex = 0;
+            comborole.SelectedIndex = 0;
         }
 
         private void signup_button_Click(object sender, EventArgs e)
@@ -38,12 +41,21 @@ namespace Найти_работу
                 string role = comborole.SelectedItem?.ToString();
                 string regDate = DateTime.Now.ToString("dd.MM.yyyy");
 
-                if (string.IsNullOrWhiteSpace(fam) || string.IsNullOrWhiteSpace(name) ||
-                    string.IsNullOrWhiteSpace(otchestvo) || string.IsNullOrWhiteSpace(nomer) ||
-                    string.IsNullOrWhiteSpace(mail) || string.IsNullOrWhiteSpace(login) ||
-                    string.IsNullOrWhiteSpace(password))
+                if (string.IsNullOrWhiteSpace(fam) ||
+                    string.IsNullOrWhiteSpace(name) ||
+                    string.IsNullOrWhiteSpace(otchestvo) ||
+                    string.IsNullOrWhiteSpace(sex) ||
+                    string.IsNullOrWhiteSpace(sempol) ||
+                    string.IsNullOrWhiteSpace(kids) ||
+                    string.IsNullOrWhiteSpace(grazhd) ||
+                    string.IsNullOrWhiteSpace(nomer) ||
+                    string.IsNullOrWhiteSpace(mail) ||
+                    string.IsNullOrWhiteSpace(birthday) ||
+                    string.IsNullOrWhiteSpace(login) ||
+                    string.IsNullOrWhiteSpace(password) ||
+                    string.IsNullOrWhiteSpace(role))
                 {
-                    MessageBox.Show("Пожалуйста, заполните необходимые поля", "Сообщение",
+                    MessageBox.Show("Пожалуйста, заполните все поля", "Сообщение",
                                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }

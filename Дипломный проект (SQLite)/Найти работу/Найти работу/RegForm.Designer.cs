@@ -542,7 +542,8 @@
             this.comborole.FormattingEnabled = true;
             this.comborole.Items.AddRange(new object[] {
             "Соискатель",
-            "Работодатель"});
+            "Работодатель",
+            "Инспектор"});
             this.comborole.Location = new System.Drawing.Point(6, 133);
             this.comborole.Margin = new System.Windows.Forms.Padding(6, 4, 4, 10);
             this.comborole.Name = "comborole";

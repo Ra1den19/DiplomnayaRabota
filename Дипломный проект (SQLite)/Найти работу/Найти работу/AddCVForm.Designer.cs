@@ -311,7 +311,7 @@
             this.textNameCompany.ForeColor = System.Drawing.Color.Black;
             this.textNameCompany.Location = new System.Drawing.Point(17, 36);
             this.textNameCompany.Name = "textNameCompany";
-            this.textNameCompany.Size = new System.Drawing.Size(370, 22);
+            this.textNameCompany.Size = new System.Drawing.Size(375, 22);
             this.textNameCompany.TabIndex = 54;
             // 
             // guna2Panel1
@@ -544,6 +544,7 @@
             // comboEdu
             // 
             this.comboEdu.BackColor = System.Drawing.Color.White;
+            this.comboEdu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEdu.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboEdu.ForeColor = System.Drawing.Color.Black;
             this.comboEdu.IntegralHeight = false;
@@ -696,7 +697,7 @@
             this.textNameUch.ForeColor = System.Drawing.Color.Black;
             this.textNameUch.Location = new System.Drawing.Point(17, 40);
             this.textNameUch.Name = "textNameUch";
-            this.textNameUch.Size = new System.Drawing.Size(370, 22);
+            this.textNameUch.Size = new System.Drawing.Size(375, 22);
             this.textNameUch.TabIndex = 54;
             // 
             // label7
